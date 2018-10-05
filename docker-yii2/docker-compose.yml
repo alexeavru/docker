@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  web:
+    image: codemix/yii2-base:latest
+    ports:
+        - "8887:80"
+    expose:
+        - "80"
+    volumes:
+        - ./:/var/www/html/
+
+

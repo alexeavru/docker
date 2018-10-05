@@ -1,0 +1,16 @@
+version: '2'
+
+networks:
+  jenkinsnet:
+
+services:
+  jenkins:
+    image: jenkins/jenkins
+    ports:
+        - "9999:8080"
+        - "50000:50000"
+    volumes:
+        - /root/docker-jenkins/jenkins_home:/var/jenkins_home
+    networks:
+      - jenkinsnet
+

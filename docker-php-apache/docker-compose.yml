@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+    main:
+      container_name: web
+      image: webdevops/php-apache
+      networks:
+          default:
+      ports:
+          - "10080:80"
+      volumes:
+          - ${PWD}/html:/app/
+      environment: 
+          PHP_DATE_TIMEZONE: Europe/Moscow
+          PHP_MEMORY_LIMIT: 256M
+

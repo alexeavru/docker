@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+    main:
+      container_name: eav
+      image: eav:latest
+      networks:
+          default:
+      ports:
+          - "8000:8080"
